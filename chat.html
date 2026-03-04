@@ -27,19 +27,19 @@
     </div>
 </body>
 <!-- Cal inline embed code begins -->
-<div style="width:65%;height:100%;overflow:scroll" id="my-cal-inline-freeconsultation"></div>
+<div style="width:70%;height:100%;overflow:scroll" id="my-cal-inline-introcall"></div>
 <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "freeconsultation", { origin: "https://app.cal.com" });
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "introcall", {origin:"https://app.cal.com"});
 
-    Cal.ns.freeconsultation("inline", {
-        elementOrSelector: "#my-cal-inline-freeconsultation",
-        config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "light" },
-        calLink: "abdulmirr/freeconsultation",
-    });
+  Cal.ns.introcall("inline", {
+    elementOrSelector:"#my-cal-inline-introcall",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+    calLink: "abdulmirr/introcall",
+  });
 
-    Cal.ns.freeconsultation("ui", { "theme": "light", "cssVarsPerTheme": { "light": { "cal-brand": "#922424" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-</script>
-<!-- Cal inline embed code ends -->
+  Cal.ns.introcall("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#9d1717"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal inline embed code ends -->
 
 </html>
