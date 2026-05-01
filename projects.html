@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .project-item {
-            margin-bottom: 2rem;
+            padding: 1.75rem 0;
+            border-bottom: 1px solid #e4e4e7;
+        }
+
+        .project-item:first-of-type {
+            padding-top: 0.25rem;
+        }
+
+        .project-item:last-of-type {
+            border-bottom: none;
         }
 
         .project-title {
@@ -17,10 +26,11 @@
             font-size: 1.1rem;
             font-weight: 700;
             color: #18181b;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: baseline;
             gap: 0.75rem;
+            flex-wrap: wrap;
         }
 
         .project-repo-link {
@@ -37,15 +47,44 @@
             color: #b31d1d;
         }
 
-        .tech-stack-list {
-            list-style: none;
-            padding: 0;
-            font-family: 'DM Sans', sans-serif;
-            color: #3f3f46;
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.875rem;
         }
 
-        .tech-stack-list li {
-            margin-bottom: 0.5rem;
+        .tag {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.75rem;
+            color: #a1a1aa;
+            border: 1px solid #e4e4e7;
+            border-radius: 0.375rem;
+            padding: 0.25rem 0.625rem;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .skills-section {
+            margin-top: 3rem;
+        }
+
+        .skills-list {
+            padding-left: 1.25rem;
+            margin-top: 0;
+        }
+
+        .skills-list li {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            color: #3f3f46;
+            line-height: 1.6;
+            margin-bottom: 0.375rem;
+            font-weight: 400;
+        }
+
+        .skills-list li:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -61,18 +100,31 @@
 
             <br>
 
-             <div class="project-item">
-                 <div class="project-title">output
-                    <a href="https://output-app.com/" class="project-repo-link" target="_blank">app →</a>
-                      </div>
-                <p class="about-text" style="margin-bottom: 0;">A productivity tool to track your output and be more intentional with your time.</p>
-             </div>
-            
+
             <div class="project-item">
                 <div class="project-title">favorite
                     <a href="https://myfavoriteapp.com/" class="project-repo-link" target="_blank">app →</a>
                 </div>
-                <p class="about-text" style="margin-bottom: 0;">A personal taste library to store and rate your favorite movies, books, albums, podcasts etc.</p>
+                <p class="about-text" style="margin-bottom: 0;">A personal taste library to store and rate your favorite
+                    movies, books, albums, podcasts etc.</p>
+                <div class="project-tags">
+                    <span class="tag">swift</span>
+                    <span class="tag">swiftui</span>
+                    <span class="tag">ios</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">output
+                    <a href="https://output-app.com/" class="project-repo-link" target="_blank">app →</a>
+                </div>
+                <p class="about-text" style="margin-bottom: 0;">A productivity tool to track your output and be more
+                    intentional with your time.</p>
+                <div class="project-tags">
+                    <span class="tag">react</span>
+                    <span class="tag">next.js</span>
+                    <span class="tag">node.js</span>
+                </div>
             </div>
 
             <div class="project-item">
@@ -80,18 +132,13 @@
                     built by abdul
                     <a href="https://n8n.io/creators/abdulmir/" class="project-repo-link" target="_blank">n8n →</a>
                 </div>
-                <p class="about-text" style="margin-bottom: 0;">started an agency, built marketing/sales workflows in n8n,
-                    shared templates with the community and became a creator.</p>
-            </div>
-
-            <div class="project-item">
-                <div class="project-title">
-                    mir studio
-                    <a href="https://drive.google.com/file/d/1qrmWgHkDGJrzQvhZaDmqt0d9mBvXteQq/view"
-                        class="project-repo-link" target="_blank">designs →</a>
+                <p class="about-text" style="margin-bottom: 0;">started an ai automation agency, built gtm/marketing
+                    workflows in n8n, shared templates with the community.</p>
+                <div class="project-tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">automation</span>
+                    <span class="tag">email outreach</span>
                 </div>
-                <p class="about-text" style="margin-bottom: 0;">clothing brand I started at 15. my introduction to the
-                    world of design, branding, and entrepreneurship. i released 4 collections from 2022-2024. </p>
             </div>
 
             <div class="project-item">
@@ -103,15 +150,37 @@
                 <p class="about-text" style="margin-bottom: 0;">mir evolved into combat after a call with my close
                     friend. we rebuilt the brand identity, designed our first collection and showcased at a popup in NY.
                 </p>
+                <div class="project-tags">
+                    <span class="tag">branding</span>
+                    <span class="tag">illustrator</span>
+                    <span class="tag">photoshop</span>
+                </div>
             </div>
 
-            <br><br>
+            <div class="project-item">
+                <div class="project-title">
+                    mir studio
+                    <a href="https://drive.google.com/file/d/1qrmWgHkDGJrzQvhZaDmqt0d9mBvXteQq/view"
+                        class="project-repo-link" target="_blank">designs →</a>
+                </div>
+                <p class="about-text" style="margin-bottom: 0;">clothing brand I started at 15. my introduction to the
+                    world of design, branding, and entrepreneurship. i released 4 collections from 2022-2024.</p>
+                <div class="project-tags">
+                    <span class="tag">branding</span>
+                    <span class="tag">illustrator</span>
+                    <span class="tag">photoshop</span>
+                </div>
+            </div>
 
-            <h2 class="section-title">tool stack</h2>
-            <ul class="tech-stack-list">
-                <li>i'm cracked with adobe: photoshop, illustrator, premiere pro</li>
-                <li>building random stuff w claude code like this website</li>
-            </ul>
+            <div class="skills-section">
+                <h2 class="section-title">skills</h2>
+                <p class="about-text" style="margin-bottom: 0.5rem;">I know how to</p>
+                <ul class="skills-list">
+                    <li>build and ship things with claude code</li>
+                    <li>design stuff with Figma & Illustrator</li>
+                    <li>edit cool videos in CapCut</li>
+                </ul>
+            </div>
 
         </main>
     </div>
