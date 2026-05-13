@@ -35,6 +35,25 @@ body {
     padding: 2rem 1.5rem;
 }
 
+/* Custom cursor (matches benwang.xyz) */
+html,
+body {
+    cursor: url('assets/customCursor.svg?v=6') 7 7, auto;
+}
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+.nav-link,
+.back-link,
+.link-red,
+.project-link,
+.project-repo-link {
+    cursor: url('assets/customCursor.svg?v=6') 7 7, pointer;
+}
+
 /* Page Layout */
 .container {
     max-width: 620px;
@@ -121,17 +140,18 @@ body {
 }
 
 .separator {
-    width: 100%;
+    width: 75%;
     height: 1px;
     background-color: #e4e4e7;
     border: none;
+    margin: 0 auto;
 }
 
 /* Navigation Links Grid */
 .links-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    column-gap: 8rem;
+    column-gap: 5.5rem;
     width: fit-content;
     margin: 0 auto;
     justify-content: center;
@@ -162,7 +182,7 @@ body {
 
 /* About Page Content */
 .story-title {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.20rem;
     font-weight: 700;
     color: #18181b;

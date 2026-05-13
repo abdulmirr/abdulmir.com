@@ -28,9 +28,24 @@
             color: #18181b;
             margin-bottom: 0.5rem;
             display: flex;
-            align-items: baseline;
+            align-items: center;
             gap: 0.75rem;
             flex-wrap: wrap;
+        }
+
+        .project-favicon {
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: inline-block;
+            vertical-align: middle;
+            object-fit: contain;
+            margin-right: -0.2rem;
+        }
+
+        .project-favicon--tight {
+            margin-right: -0.4rem;
         }
 
         .project-repo-link {
@@ -102,7 +117,9 @@
 
 
             <div class="project-item">
-                <div class="project-title">favorite
+                <div class="project-title">
+                    <img src="icons/favorite.svg" alt="" class="project-favicon">
+                    favorite
                     <a href="https://myfavoriteapp.com/" class="project-repo-link" target="_blank">app →</a>
                 </div>
                 <p class="about-text" style="margin-bottom: 0;">A personal taste library to store and rate your favorite
@@ -115,7 +132,9 @@
             </div>
 
             <div class="project-item">
-                <div class="project-title">output
+                <div class="project-title">
+                    <img src="icons/output.svg" alt="" class="project-favicon project-favicon--tight">
+                    output
                     <a href="https://output-app.com/" class="project-repo-link" target="_blank">app →</a>
                 </div>
                 <p class="about-text" style="margin-bottom: 0;">A productivity tool to track your output and be more
@@ -129,6 +148,7 @@
 
             <div class="project-item">
                 <div class="project-title">
+                    <img src="icons/builtbyabdul.jpeg" alt="" class="project-favicon">
                     built by abdul
                     <a href="https://n8n.io/creators/abdulmir/" class="project-repo-link" target="_blank">n8n →</a>
                 </div>
@@ -143,6 +163,7 @@
 
             <div class="project-item">
                 <div class="project-title">
+                    <img src="icons/combat.jpg" alt="" class="project-favicon">
                     combat
                     <a href="https://www.combatny.com/archive" class="project-repo-link" target="_blank">first
                         collection →</a>
@@ -159,6 +180,7 @@
 
             <div class="project-item">
                 <div class="project-title">
+                    <img src="icons/mir%20studio.png" alt="" class="project-favicon">
                     mir studio
                     <a href="https://drive.google.com/file/d/1qrmWgHkDGJrzQvhZaDmqt0d9mBvXteQq/view"
                         class="project-repo-link" target="_blank">designs →</a>
@@ -176,9 +198,9 @@
                 <h2 class="section-title">skills</h2>
                 <p class="about-text" style="margin-bottom: 0.5rem;">I know how to</p>
                 <ul class="skills-list">
-                    <li>build and ship things with claude code</li>
-                    <li>design stuff with Figma & Illustrator</li>
-                    <li>edit cool videos in CapCut</li>
+                    <li>build and ship software with claude code</li>
+                    <li>design products with Figma & Illustrator</li>
+                    <li>edit cool videos with CapCut</li>
                 </ul>
             </div>
 
