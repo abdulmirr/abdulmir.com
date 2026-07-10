@@ -103,9 +103,9 @@ input[type="button"],
 }
 
 .name {
-    font-family: 'Geist', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: rgb(24, 24, 27);
     line-height: 28px;
     letter-spacing: 0px;
@@ -122,6 +122,11 @@ input[type="button"],
     font-weight: 400;
     font-style: normal;
     margin-top: 0.5rem;
+}
+
+.subtitle .at-sign {
+    font-family: 'DM Sans', 'Geist', sans-serif;
+    font-style: normal;
 }
 
 .link-red {
