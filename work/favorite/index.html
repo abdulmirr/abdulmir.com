@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Abdul Mir - Favorite</title>
+    <link rel="stylesheet" type="text/css" href="/site.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-bar">
+        <a href="/" class="logo-link"><span class="at">@</span>creativesoldr</a>
+        <nav>
+            <a href="/about">about</a>
+            <a href="/work" class="selected">work</a>
+            <a href="https://abdulmirr.substack.com/">blog</a>
+        </nav>
+      </div>
+        <h1>Favorite</h1>
+        <ul class="article-metadata">
+          <li>Currently building</li>
+        </ul>
+
+        <p>This is what I&rsquo;m building now.</p>
+        <p><a href="https://myfavoriteapp.com/">Favorite</a> is a digital library for your taste. Every book, film and album that shaped you, kept in one place and shared with the people whose taste you trust.</p>
+        <p>The idea came from a simple observation: the best recommendations I&rsquo;ve ever gotten came from a friend who knew me, not from an algorithm. Social media rewards attention over intention. Favorite is the quieter alternative, a library you build slowly and a feed made of what your people actually love.</p>
+
+        <h2>Taste grows socially</h2>
+        <p>You follow your people and see what they save and what they say about it. The feed uses AI to tune daily picks to your taste. Less algorithm slop, more &ldquo;your sharpest friend told you to watch this.&rdquo;</p>
+
+        <div class="strip-container">
+          <div class="strip landscape">
+            <video autoplay loop muted playsinline preload="metadata" poster="/work/favorite/intro.jpg" width="1600" height="1000"><source src="/work/favorite/intro.mp4" type="video/mp4"></video>
+            <img src="/work/favorite/site-0.jpg" width="2400" height="1500" alt="Your taste, in one place" />
+            <img src="/work/favorite/site-1.jpg" width="2400" height="1500" alt="Every kind of favorite" loading="lazy" />
+          </div>
+          <div class="strip-nav">
+            <button class="prev" type="button">&larr;</button>
+            <span class="count">1 / 3</span>
+            <button class="next" type="button">&rarr;</button>
+          </div>
+        </div>
+        <p class="caption">myfavoriteapp.com</p>
+
+        <nav class="work">
+          <a href="/work/favorite/" class="selected">Favorite</a>
+          <a href="/work/human-delta/">Human Delta</a>
+          <a href="/work/built-by-abdul/">Built by Abdul</a>
+          <a href="/work/combat/">Combat / Mir</a>
+        </nav>
+    </div>
+    <script>
+      document.querySelectorAll(".strip-container").forEach(c => {
+        const strip = c.querySelector(".strip"), imgs = [...strip.querySelectorAll("img, video")], count = c.querySelector(".count");
+        const step = () => (imgs[0].getBoundingClientRect().width + 3);
+        c.querySelector(".prev").addEventListener("click", () => strip.scrollBy({ left: -step() * 2, behavior: "smooth" }));
+        c.querySelector(".next").addEventListener("click", () => strip.scrollBy({ left: step() * 2, behavior: "smooth" }));
+        if (count) strip.addEventListener("scroll", () => { count.textContent = (Math.min(imgs.length, Math.round(strip.scrollLeft / step()) + 1)) + " / " + imgs.length; });
+      });
+    </script>
+  </body>
+</html>

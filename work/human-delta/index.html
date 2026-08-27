@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Abdul Mir - Human Delta</title>
+    <link rel="stylesheet" type="text/css" href="/site.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-bar">
+        <a href="/" class="logo-link"><span class="at">@</span>creativesoldr</a>
+        <nav>
+            <a href="/about">about</a>
+            <a href="/work" class="selected">work</a>
+            <a href="https://abdulmirr.substack.com/">blog</a>
+        </nav>
+      </div>
+        <h1>Human Delta</h1>
+        <ul class="article-metadata">
+          <li>May 2026&ndash;August 2026</li>
+          <li>Go-to-market</li>
+        </ul>
+
+        <p>Human Delta is the knowledge layer under AI support agents. It connects to wherever a company&rsquo;s knowledge lives (help centers, internal docs, Zendesk, Salesforce, ServiceNow), finds the contradictions, outdated pages and compliance problems that agents repeat to customers, fixes them with human approval, and serves the clean version back to any agent. I was in charge of GTM for the summer with the two founders, selling to support, IT and AI leaders at large companies.</p>
+
+        <p>In 3 months I shipped:</p>
+        <ul>
+          <li><span>A free help-center audit tool at scan.humandelta.ai, used as the opener for all of our outreach</span></li>
+          <li><span>540 cold calls with account-based follow-ups, 4 meetings booked</span></li>
+          <li><span>6 LinkedIn outreach campaigns in Lemlist, ~20% reply rate</span></li>
+          <li><span>Filled up guest lists for two dinners we hosted, at CCW and Ai4 in Las Vegas</span></li>
+          <li><span>The LinkedIn ads program, set up from scratch</span></li>
+          <li><span>5 internal automations, including a Claude agent that reads the week&rsquo;s Slack, CRM and call notes every Sunday and updates the company&rsquo;s GTM doc on its own</span></li>
+          <li><span>The onboarding guide for my replacement</span></li>
+        </ul>
+
+        <h2>The audit tool</h2>
+        <p>I built <a href="https://scan.humandelta.ai/">scan.humandelta.ai</a> with Claude Code. Paste a company&rsquo;s help center URL and it crawls the site and reports where AI assistants like ChatGPT contradict the company&rsquo;s own published answers: broken links, outdated policies, pages that disagree with each other. Every quote is checked word for word against the source page, so a prospect can verify it themselves. We used it as the opener for all of our outreach and sent the full PDF report to prospects once a conversation started.</p>
+
+        <div class="pair">
+          <a href="/work/human-delta/scan-landing.jpg" class="zoom"><img src="/work/human-delta/scan-landing.jpg" width="2880" height="1800" alt="scan.humandelta.ai" /></a>
+          <a href="/work/human-delta/scan-report.jpg" class="zoom"><img src="/work/human-delta/scan-report.jpg" width="2880" height="2200" alt="An audit report" /></a>
+        </div>
+        <p class="caption">Landing page and an audit report</p>
+
+        <h2>Outbound</h2>
+        <p><u>Cold calling.</u> 540 calls, a 12% connect rate, 4 meetings booked. I ran an account-based motion: research the company first, call the decision maker, follow up the same day by email and LinkedIn, and keep following up until they answer. I also wrote the call scripts and playbook the team still uses.</p>
+        <p><u>LinkedIn.</u> 6 outreach campaigns in Lemlist, sent from a founder&rsquo;s account to over a thousand support, IT and AI leaders. Event invites got 15 to 23% replies and product pitches around 20%.</p>
+        <p><u>The lists.</u> I built every outreach list myself: 511 target companies, each verified to be putting AI in front of customers, and 2,500+ contacts at those companies, sourced from LinkedIn Sales Navigator, scraped conference speaker lists and enriched with Clay.</p>
+
+        <h2>Dinners</h2>
+        <p>We hosted dinners at CCW and Ai4 in Las Vegas, and filling the seats was my job. I built the invite lists from the speaker and attendee lists, invited people over LinkedIn and by phone, vetted every RSVP so only decision makers got a seat, and ran the follow-ups after. Both dinners turned into active deals.</p>
+
+        <h2>Ads</h2>
+        <p>We experimented with Google and LinkedIn ads. I set up the LinkedIn program from scratch: uploaded the 511 target companies as the audience, wired conversion tracking into the audit tool, and wrote the ad copy after reading about 400 ads from competitors to find the angle nobody else was using.</p>
+
+        <h2>Automations</h2>
+        <p>I built 5 internal automations so the GTM work kept running autonomously:</p>
+        <ul>
+          <li><span><u>A GTM doc that updates itself.</u> Every Sunday a Claude agent reads the week&rsquo;s Slack, CRM and call transcripts, updates the company&rsquo;s GTM doc and posts a summary of the week. Slack deletes messages after 180 days, so this doc is the company&rsquo;s memory.</span></li>
+          <li><span><u>Reply alerts.</u> Any reply to a LinkedIn campaign posts to Slack, so no warm lead waits.</span></li>
+          <li><span><u>Lead alerts.</u> Every scan run on the site and every website inquiry posts to Slack and creates the company in the CRM. One inbound deal came in this way.</span></li>
+          <li><span><u>LinkedIn Buddy.</u> A content bot that suggests daily LinkedIn post ideas for the founders, based on what happened that week.</span></li>
+        </ul>
+
+        <h2>Handoff</h2>
+        <p>Before leaving I wrote the onboarding guide for the next GTM hire: the team, the pitch, every channel ranked by what actually worked, and their first two weeks.</p>
+
+        <nav class="work">
+          <a href="/work/favorite/">Favorite</a>
+          <a href="/work/human-delta/" class="selected">Human Delta</a>
+          <a href="/work/built-by-abdul/">Built by Abdul</a>
+          <a href="/work/combat/">Combat / Mir</a>
+        </nav>
+    </div>
+    <div class="lightbox" hidden><img alt="" /></div>
+    <script>
+      (() => {
+        const box = document.querySelector(".lightbox"), img = box.querySelector("img");
+        document.querySelectorAll("a.zoom").forEach(a => a.addEventListener("click", e => {
+          e.preventDefault(); img.src = a.href; img.alt = a.querySelector("img").alt; box.hidden = false; document.body.style.overflow = "hidden";
+        }));
+        const close = () => { box.hidden = true; document.body.style.overflow = ""; };
+        box.addEventListener("click", close);
+        document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+      })();
+    </script>
+  </body>
+</html>

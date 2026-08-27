@@ -1,53 +1,29 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-Static personal website for abdulmir.com. Hosted on GitHub Pages (CNAME: `abdulmir.com`). No build tools, no frameworks — pure HTML and CSS.
+Static personal website for abdulmir.com. Pure HTML and CSS, no build step. Deployed on Vercel (project `abdulmir.com`, linked via `.vercel/`); `CNAME` is kept for the custom domain. Design is a close adaptation of david.kjelkerud.com — see `DESIGN-NOTES.md` for the full design system (fonts, sizes, colors, spacing, components).
 
-## Architecture
+## Structure
 
-- **Pages**: `index.html` (home), `about.html`, `projects.html`, `chat.html`
-- **Styles**: `style.css` is the active stylesheet linked by all pages. `styles.css` is an older version (has fade-in animation, `link-blue` instead of `link-red`) — not currently used.
-- **Navigation**: All subpages use `← Back to home` link pointing to `index.html`. Home links to subpages via a two-column nav grid.
-- **Chat page**: Embeds Cal.com inline scheduler (`cal.com/abdulmirr/freeconsultation`).
-- **Projects page**: Has page-specific `<style>` block for project items (`.project-item`, `.project-title`, `.project-repo-link`, `.tech-stack-list`).
+- `index.html` — home: `@creativesoldr` wordmark + nav (about / work / blog), photo, two-line intro, contact links
+- `about/index.html` — about page (`.page-about` class scopes its 36px headings)
+- `work/index.html` — text-only project list; `work/<slug>/index.html` detail pages: `favorite`, `human-delta`, `built-by-abdul`, `combat`
+- `resume.html` — redirect to the Google Drive resume
+- `site.css` — the single stylesheet; `fonts/` — self-hosted Minion 3 (licensed Adobe font); `icons/` — project icons
+- Media lives next to its page (`work/combat/journal/`, `work/combat/techpacks/`, `work/favorite/`, `work/human-delta/`)
 
-## Design System
+## Conventions
 
-- **Fonts**: Geist (headings/body), Geist Mono (subtitle, nav links), DM Sans (about/projects text). Loaded via Google Fonts CDN + local `@font-face` fallbacks.
-- **Colors**: Zinc palette — `#18181b` (text), `#3f3f46` (body text), `#71717a` (muted), `#a1a1aa` (back link), `#e4e4e7` (separator). Red accent: `#b31d1d`.
-- **Layout**: Centered `.container` with `max-width: 620px`. Subpages use `.page-about` for extra vertical padding.
-- **Responsive**: Single breakpoint at `640px`. Nav grid collapses to single column on mobile.
+- All asset paths are absolute (`/site.css`, `/work/...`) so pages work at any depth.
+- Nav "blog" links out to Substack; project pages end with a `nav.work` footer listing all four projects in the same order as the work page.
+- Copy is short and plain; no em dashes in body text where a colon or period works.
+- Detail-page media: `.strip` (horizontal scroll-snap with prev/next) for many images, `.pair` (two side by side, click to enlarge via `.lightbox`) for two.
 
 ## Development
 
-No build step. Open any `.html` file directly in a browser, or use a local server:
 ```
 npx serve .
 ```
-
-## Website Design Recreation Workflow
-
-When the user provides a reference image (screenshot) and optionally some CSS classes or style notes:
-
-1. **Generate** a single `index.html` file using Tailwind CSS (via CDN: `<script src="https://cdn.tailwindcss.com"></script>`). Include all content inline unless requested otherwise.
-2. **Screenshot** the rendered page using Puppeteer (`npx puppeteer screenshot index.html --fullpage`). Capture distinct sections individually too.
-3. **Compare** screenshot against the reference image. Check: spacing/padding (px), font sizes/weights/line-heights, colors (hex), alignment, border radii/shadows, responsive behavior, image sizing.
-4. **Fix** every mismatch. Edit the HTML/Tailwind code.
-5. **Re-screenshot** and compare again.
-6. **Repeat** steps 3-5 until within ~2-3px of the reference. Always do at least 2 comparison rounds.
-
-### Defaults for Recreation
-- Placeholder images from https://placehold.co/ when source images aren't provided
-- Mobile-first responsive design
-- Heroicons (via CDN) or inline SVG for icons
-- If fonts aren't web-safe, use closest Google Fonts alternative
-- Implement basic hover/active states for interactive elements
-
-### Stopping Criteria
-- Visual differences ≤2-3px across all sections
-- Colors match within 5% tolerance (or exact if provided)
-- Typography visually indistinguishable
-- User explicitly approves
