@@ -22,6 +22,15 @@ Static personal website for abdulmir.com. Pure HTML and CSS, no build step. Depl
 - Copy is short and plain; no em dashes in body text where a colon or period works.
 - Detail-page media: `.strip` (horizontal scroll-snap with prev/next) for many images, `.pair` (two side by side, click to enlarge via `.lightbox`) for two.
 
+## Performance rules
+
+- Images are WebP, sized to 2x their largest display width (home photo 540px, article images 1024–1320px, strip pages 1024px tall, icons 96px), encoded with `sharp` at quality 75–82. Never commit a raw camera JPEG or PNG screenshot; convert first (`npm i sharp` in a scratch dir, `sharp(src).resize({width}).webp({quality}).toFile(out)`).
+- Every `<img>` carries `width`/`height`; below-the-fold images get `loading="lazy" decoding="async"`; the home photo gets `fetchpriority="high"`.
+- Lightbox images use a separate larger file (`-1800.webp`) so the inline thumbnail stays small.
+- Videos: `preload="none"` + play on scroll-in (see the Favorite page), not `autoplay`.
+- The body font is preloaded on every page; `font-display: swap`.
+- `vercel.json` sets long-lived `Cache-Control` for `/fonts` and media; HTML/CSS stay `must-revalidate`.
+
 ## Development
 
 ```
