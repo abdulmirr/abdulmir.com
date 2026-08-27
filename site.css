@@ -2,14 +2,14 @@
 @font-face {
   font-family: "minion-3-1";
   src: url("/fonts/minion-3-regular.woff2") format("woff2");
-  font-display: auto;
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "minion-3-1";
   src: url("/fonts/minion-3-italic.woff2") format("woff2");
-  font-display: auto;
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
 }
