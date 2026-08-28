@@ -402,6 +402,7 @@ ul.article-metadata li {
 
 img.full-bleed {
   display: block;
+  height: auto;
   max-width: var(--viewport-max);
   width: 100%;
   margin: var(--item-margin);
@@ -409,6 +410,7 @@ img.full-bleed {
 
 img.half-bleed {
   display: block;
+  height: auto;
   max-width: var(--viewport-half);
   width: 100%;
   margin: var(--item-margin);
@@ -416,6 +418,7 @@ img.half-bleed {
 
 img.para-bleed {
   display: block;
+  height: auto;
   max-width: var(--viewport-para);
   width: 100%;
   margin: var(--item-margin);
@@ -479,6 +482,7 @@ img.para-bleed {
 .image-background img {
   width: 100%;
   max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
@@ -624,6 +628,7 @@ a.image-link {
 .headshot.plain img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 /* Polaroid frame, borrowed from myfavoriteapp.com's photo tiles */
